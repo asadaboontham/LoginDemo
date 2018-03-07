@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asadaboomtham.logindemo.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="logout"
+            android:text="@string/logout" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/cover"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/facebook_connect_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/photoImageView"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_above="@+id/nameTextView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="45dp" />
+
+                    <TextView
+                        android:id="@+id/nameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="73dp"
+                        android:layout_marginTop="-45dp"
+                        android:text="อัษฎา บุญธรรม"
+                        android:textColor="#fff"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/idTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nameTextView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        tools:text="Id" />
+
+                    <TextView
+                        android:id="@+id/emailTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        tools:text="Id" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--main-->
+
+            <LinearLayout
+                android:id="@+id/linearLayout_AllNews"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="0"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-66dp"
+                    android:background="#fff"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/agricultural" />
+
+                <TextView
+                    android:id="@+id/customFontTextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="250dp"
+                    android:layout_marginTop="-40dp"
+                    android:text="ข่าว"
+                    android:textColor="#fff"
+                    android:textSize="28sp" />
+            </LinearLayout>
+            <!--second-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <!--Weather-->
+                <LinearLayout
+                    android:id="@+id/linearLayout_weather"
+                    android:layout_width="260dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3F51B5"
+                    android:orientation="vertical">
+                    <!--KasetKao-->
+                    <LinearLayout
+                        android:id="@+id/linearLayout_Kaokaset"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#fff">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_launcher_background" />
+                    </LinearLayout>
+                    KasetKao
+
+                </LinearLayout>
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="7dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="#3F51B5"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--Weather icon-->
+                <!--<TextView-->
+                <!--android:id="@+id/weather_icon"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginTop="-5dp"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textSize="42sp" />-->
+                <!--Weather Temp-->
+                <!--<TextView-->
+                <!--android:id="@+id/current_temperature_field"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginTop="-10dp"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textSize="26sp" />-->
+                <!--Weather city-->
+                <!--<TextView-->
+                <!--android:id="@+id/city_field"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="-100dp"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:maxLines="1"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textSize="11sp" />-->
+
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="-10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="#3F51B5"-->
+                <!--android:orientation="horizontal">-->
+                <!--&lt;!&ndash;Weather Detail&ndash;&gt;-->
+                <!--<TextView-->
+                <!--android:id="@+id/details_field"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@+id/weather_icon"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:gravity="center"-->
+                <!--android:maxLines="2"-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:textColor="#FFFFFF" />-->
+                <!--</LinearLayout>-->
+
+
+                <!--Weather-->
+
+                <!--Facebook Feed-->
+                <LinearLayout
+                    android:id="@+id/linearLayout_facebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/abc"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-18dp"
+                        android:gravity="center"
+                        android:text="facebook"
+                        android:textColor="#000" />
+
+                </LinearLayout>
+                <!--Facebook Feed-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp">
+                <!--&lt;!&ndash;KasetKao&ndash;&gt;-->
+                <!--<LinearLayout-->
+                <!--android:id="@+id/linearLayout_Kaokaset"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="#fff">-->
+
+                <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:src="@drawable/kasetkaoklai" />-->
+                <!--</LinearLayout>-->
+                <!--KasetKao-->
+
+                <!--DailyNews-->
+                <LinearLayout
+                    android:id="@+id/linearLayout_Dailynews"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    android:background="#fff">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_launcher_background" />
+
+                </LinearLayout>
+                <!--DailyNews-->
+
+                <!--ThaiPbs-->
+                <LinearLayout
+                    android:id="@+id/linearLayout_Thaipbs"
+                    android:layout_width="260dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="#fff">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_launcher_background" />
+                </LinearLayout>
+                <!--ThaiPbs-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
